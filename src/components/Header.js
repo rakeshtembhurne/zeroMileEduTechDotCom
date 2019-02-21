@@ -7,7 +7,7 @@ class Header extends React.Component {
                 <div className="inner">
                     <span className="icon major fa-cloud"></span>
                     <h1><strong>Zero Mile EduTech</strong></h1>
-                    <p></p>
+                    <p>Web and Mobile Application Development Company</p>
                     <ul className="actions">
                         <li><a href="#one" className="button scrolly">Discover</a></li>
                     </ul>

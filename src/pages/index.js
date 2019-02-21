@@ -22,7 +22,7 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>About Us</h2>
                             </header>
-                            <p> Zero Mile EduTech was initially started in 2014. We generally works with foreign countries.</p>
+                            <p> Zero Mile EduTech was initially started in 2014. We generally works with foreign countries. We provide better solutions to our clients for their business goal.</p>
                         </div>
                         <div className="col-6">
                             <span className="image fit"><img src={pic01} alt="" /></span>
@@ -46,9 +46,8 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>Technologies we use</h2>
                             </header>
-                            <p>We used various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
-                            <p> We design and develop mobile apps and dynamic websites.
-                            We have our Zemet Academy in that we teaches various course which helps students to grow their career. </p>
+                            <p>We use various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
+                            <p>We used JS frameworks like React, Angular, Node, etc. We use twitter boostrap to create modern websites and apps.</p>
                         </div>
                     </div>
                 </section>
