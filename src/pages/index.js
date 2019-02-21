@@ -47,7 +47,7 @@ class Homepage extends React.Component {
                                 <h2>Technologies we use</h2>
                             </header>
                             <p>We use various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
-                            <p>We used JS frameworks like React, Angular, Node, etc. We use twitter boostrap to create modern websites and apps.</p>
+                            <p>We used JS frameworks like React, Angular, Node, etc. We use twitter bootstrap to create modern websites and apps.</p>
                         </div>
                     </div>
                 </section>
