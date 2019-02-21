@@ -45,7 +45,7 @@ class Homepage extends React.Component {
                         </div>
                         <div className="col-6">
                             <header className="major">
-                                <h2>Technologies we used</h2>
+                                <h2>Technologies we use</h2>
                             </header>
                             <p>We used various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
                             <p></p>
