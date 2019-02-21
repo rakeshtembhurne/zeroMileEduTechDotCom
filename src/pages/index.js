@@ -4,9 +4,9 @@ import Helmet from "react-helmet";
 import Layout from '../components/layout';
 
 import pic01 from '../assets/images/chris-ried-512801-unsplash.jpg'
-import pic02 from '../assets/images/pic02.jpg'
-import pic03 from '../assets/images/pic03.jpg'
-import pic04 from '../assets/images/pic04.jpg'
+import pic02 from '../assets/images/lamp_stack.png'
+import pic03 from '../assets/images/mern_stack.png'
+import pic04 from '../assets/images/jamstack.png'
 
 class Homepage extends React.Component {
     render() {
@@ -56,25 +56,25 @@ class Homepage extends React.Component {
                     <div className="grid-wrapper">
                         <div className="col-12">
                             <header className="major">
-                                <h2>Our Products</h2>
+                                <h2>Technologies stack we use</h2>
                             </header>
                             <p></p>
                         </div>
 
                         <div className="col-4">
                             <span className="image fit"><img src={pic02} alt="" /></span>
-                            <h3>codeigniter</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>LAMP/LEMP</h3>
+                            <p>LEMP is a variation of the ubiquitous LAMP stack used for developing and deploying web applications.</p>
                         </div>
                         <div className="col-4">
                             <span className="image fit"><img src={pic03} alt="" /></span>
-                            <h3>Wordpress</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>MEAN/MERN</h3>
+                            <p>A MERN is merely an acronym standing for MongoDB, Express.js, React, and Node.js. The kicker? The entire thing is written in Javascript.</p>
                         </div>
                         <div className="col-4">
                             <span className="image fit"><img src={pic04} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
-                            <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
+                            <h3>JAM</h3>
+                            <p>JAMstack stands for JavaScript, APIs, and Markup. The term was coined by Mathias Biilmann to describe a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.</p>
                         </div>
 
                     </div>
