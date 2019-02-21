@@ -83,11 +83,12 @@ class Homepage extends React.Component {
                 <section id="four" className="main style2 special">
                     <div className="container">
                         <header className="major">
-                            <h2>Want to connect with us?</h2>
+                            <h2>Contact Us</h2>
                         </header>
-                        <p>Sed lacus nascetur ac ante amet sapien.</p>
                         <ul className="actions uniform">
-                            <li><a href="#" className="button special">Sign Up</a></li>
+                            <li><span>Name: Rakesh Tembhurne</span></li>
+                            <li><span>Email: rakesh@zeromileedutech.com</span></li>
+                            <li><span>Mobile No: 7020138038</span></li>
                         </ul>
                     </div>
                 </section>
