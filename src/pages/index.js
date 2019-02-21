@@ -22,7 +22,8 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>About Us</h2>
                             </header>
-                            <p>We design and develop mobile apps and dynamic websites.</p>
+                            <p>We design and develop mobile apps and dynamic websites.
+                            We have our Zemet Academy in that we teaches various course which helps students to grow their career.</p>
                         </div>
                         <div className="col-6">
                             <span className="image fit"><img src={pic01} alt="" /></span>
@@ -46,8 +47,7 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>Technologies we used</h2>
                             </header>
-                            <p>We mostly use JS framework to build dynamic websites and mobile apps.</p>
-                            <p></p>
+                            <p>We used various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
                             <p></p>
                         </div>
                     </div>
@@ -59,7 +59,7 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>Our Products</h2>
                             </header>
-                            <p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
+                            <p></p>
                         </div>
 
                         <div className="col-4">
