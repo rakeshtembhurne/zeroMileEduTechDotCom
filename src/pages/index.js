@@ -22,7 +22,7 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>About Us</h2>
                             </header>
-                            <p> Zero Mile EduTech was initially started in 2014. We generally works with foreign countries. We provide better solutions to our clients for their business goal.</p>
+                            <p> Zero Mile EduTech was initially started in 2014. We generally works for foreign countries. We provide better solutions to our clients for their business goal.</p>
                         </div>
                         <div className="col-6">
                             <span className="image fit"><img src={pic01} alt="" /></span>
@@ -46,7 +46,7 @@ class Homepage extends React.Component {
                             <header className="major">
                                 <h2>Technologies we use</h2>
                             </header>
-                            <p>We use various technologiest to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
+                            <p>We use various technologies to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
                             <p>We used JS frameworks like React, Angular, Node, etc. We use twitter bootstrap to create modern websites and apps.</p>
                         </div>
                     </div>
@@ -63,12 +63,12 @@ class Homepage extends React.Component {
 
                         <div className="col-4">
                             <span className="image fit"><img src={pic02} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
+                            <h3>codeigniter</h3>
                             <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
                         </div>
                         <div className="col-4">
                             <span className="image fit"><img src={pic03} alt="" /></span>
-                            <h3>Magna feugiat lorem</h3>
+                            <h3>Wordpress</h3>
                             <p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
                         </div>
                         <div className="col-4">
@@ -83,12 +83,11 @@ class Homepage extends React.Component {
                 <section id="four" className="main style2 special">
                     <div className="container">
                         <header className="major">
-                            <h2>Ipsum feugiat consequat?</h2>
+                            <h2>Want to connect with us?</h2>
                         </header>
                         <p>Sed lacus nascetur ac ante amet sapien.</p>
                         <ul className="actions uniform">
                             <li><a href="#" className="button special">Sign Up</a></li>
-                            <li><a href="#" className="button">Learn More</a></li>
                         </ul>
                     </div>
                 </section>
