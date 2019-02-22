@@ -95,7 +95,7 @@ class Homepage extends React.Component {
                             <li><strong>Name:</strong> Rakesh Tembhurne</li>
                             <li><strong>Email:</strong> rakesh@zeromileedutech.com</li>
                             <li><strong>Phone:</strong> 7020138038</li>
-                            <li><strong>Address:</strong> Sukhkarta Apartment 2nd Floor 202</li>
+                            <li><strong>Address:</strong> Flat No. 202, Sukhkarta Apartment, Suyog Nagar, Near Narendra Nagar Fire Station, Ring Road, Nagpur, 440015</li>
                         </ul>
                     </div>
                 </section>
