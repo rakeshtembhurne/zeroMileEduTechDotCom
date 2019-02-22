@@ -1055,6 +1055,18 @@
 		margin-right: 26em;
 		margin-left: 24em;
 	}
+	.mapouter {
+		text-align:right;
+		height:500px;
+		width:600px;
+	}
+
+	.gmap_canvas {
+		overflow: hidden;
+		background: none !important;
+		height: 500px;
+		width: 600px;
+	}
 
 /* XLarge */
 
