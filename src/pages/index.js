@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 import Layout from '../components/layout';
 
-import pic01 from '../assets/images/chris-ried-512801-unsplash.jpg'
+import pic01 from '../assets/images/about-us.jpg'
 import pic02 from '../assets/images/lamp_stack.png'
 import pic03 from '../assets/images/mern_stack.png'
 import pic04 from '../assets/images/jamstack.png'
