@@ -44,10 +44,16 @@ class Homepage extends React.Component {
                         </div>
                         <div className="col-6">
                             <header className="major">
-                                <h2>Technologies we use</h2>
+                                <h2>Our Services</h2>
                             </header>
-                            <p>We use various technologies to build dynamic websites and mobile apps. We are up to date with latest technologies.</p>
-                            <p>We used JS frameworks like React, Angular, Node, etc. We use twitter bootstrap to create modern websites and apps.</p>
+                            <ul>
+                                <li>SoftWare Developer</li>
+                                <li>Web Apps Developer</li>
+                                <li>Mobile App Developer</li>
+                                <li>Software Consultant</li>
+                                <li>Software Trainings</li>
+                                <li>Social Media Marketing</li>
+                            </ul>
                         </div>
                     </div>
                 </section>
@@ -85,10 +91,11 @@ class Homepage extends React.Component {
                         <header className="major">
                             <h2>Contact Us</h2>
                         </header>
-                        <ul className="actions uniform">
-                            <li><span>Name: Rakesh Tembhurne</span></li>
-                            <li><span>Email: rakesh@zeromileedutech.com</span></li>
-                            <li><span>Mobile No: 7020138038</span></li>
+                        <ul className="ul">
+                            <li><strong>Name:</strong> Rakesh Tembhurne</li>
+                            <li><strong>Email:</strong> rakesh@zeromileedutech.com</li>
+                            <li><strong>Phone:</strong> 7020138038</li>
+                            <li><strong>Address:</strong> Sukhkarta Apartment 2nd Floor 202</li>
                         </ul>
                     </div>
                 </section>

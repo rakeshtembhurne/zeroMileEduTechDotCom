@@ -1,11 +1,12 @@
 import React from 'react'
+import logo from '../assets/images/logo.png'
 
 class Header extends React.Component {
     render() {
         return (
             <section id="header">
                 <div className="inner">
-                    <span className="icon major fa-cloud"></span>
+                    <span><img src={logo} alt="" /></span>
                     <h1><strong>Zero Mile EduTech</strong></h1>
                     <p>Web and Mobile Application Development Company</p>
                     <ul className="actions">
