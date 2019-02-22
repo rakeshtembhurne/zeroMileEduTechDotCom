@@ -10,7 +10,7 @@ import pic04 from '../assets/images/jamstack.png'
 
 class Homepage extends React.Component {
     render() {
-        const siteTitle = "Gatsby Starter - Photon";
+        const siteTitle = "Zero Mile EduTech";
 
         return (
             <Layout>
