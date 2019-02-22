@@ -91,11 +91,11 @@ class Homepage extends React.Component {
                         <header className="major">
                             <h2>Contact Us</h2>
                         </header>
-                        <ul className="ul">
-                            <li><strong>Name:</strong> Rakesh Tembhurne</li>
-                            <li><strong>Email:</strong> rakesh@zeromileedutech.com</li>
-                            <li><strong>Phone:</strong> 7020138038</li>
-                            <li><strong>Address:</strong> Flat No. 202, Sukhkarta Apartment, Suyog Nagar, Near Narendra Nagar Fire Station, Ring Road, Nagpur, 440015</li>
+                        <ul className="copyright ul">
+                            <li><strong>Name:</strong> <p>Rakesh Tembhurne</p></li>
+                            <li><strong>Email:</strong> <p>rakesh@zeromileedutech.com</p></li>
+                            <li><strong>Phone:</strong> <p>7020138038</p></li>
+                            <li className="specialLi"><strong>Address:</strong> <p>Flat No. 202, Sukhkarta Apartment, Suyog Nagar, Near Narendra Nagar Fire Station, Ring Road, Nagpur, 440015</p></li>
                         </ul>
                     </div>
                 </section>
