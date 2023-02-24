@@ -96,10 +96,10 @@ class Homepage extends React.Component {
                         <li><strong>Name</strong> <p>Rakesh Tembhurne</p></li>
                         <li><strong>Email</strong> <p>rakesh@zeromileedutech.com</p></li>
                         <li><strong>Phone</strong> <p>+91 7020138038</p></li>
-                        <li className="specialLi"><strong>Address</strong> <p>Flat No. 202, Sukhkarta Apartment, Suyog Nagar, Near Narendra Nagar Fire Station, Ring Road, Nagpur, 440015</p></li>
+                        <li className="specialLi"><strong>Address</strong> <p>Flat No. 302, Vaishnavi Regency, Behind Mahajan Hardware, Manish Nagar, Somalwada, Nagpur, 440015</p></li>
                     </ul>
                     <div class="gmap_canvas">
-                        <iframe width="30%" height="80%" id="gmap_canvas" src="https://maps.google.com/maps?q=Zero%20Mile%20Edutech&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        <iframe width="30%" height="80%" id="gmap_canvas" src="https://goo.gl/maps/9uYWMrTUmVGAm6CC9" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                         </iframe>
                     </div>
                 </section>
