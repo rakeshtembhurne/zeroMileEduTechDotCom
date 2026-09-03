@@ -47,8 +47,7 @@ enabled automatically.
 
 ## Notes / to-do
 
-- The contact section still shows `rakesh@zeromileedutech.com` (dead since the
-  old domain lapsed). Update the email in `index.html` to a live address.
+- Contact email is `rakesh@zemet.org` (update it in `index.html` if it ever changes).
 - The old Google Analytics (UA-…) snippet and the old `goo.gl` map iframe were
   removed (both services are shut down). The contact section now links to a
   Google Maps search for the address instead.
