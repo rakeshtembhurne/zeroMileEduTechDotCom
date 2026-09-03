@@ -29,9 +29,12 @@ repo alone — you must create a new site in your new account:
 
 ## Pointing zemet.org at the new site
 
-In the new site’s **Site settings → Domain management → Add custom domain**,
-add `zemet.org` and `www.zemet.org`, then set `zemet.org` as the primary domain.
-Netlify provisions HTTPS automatically (Let’s Encrypt).
+The Netlify site is `zemet-org` (`https://zemet-org.netlify.app`). In its
+**Site settings → Domain management → Add custom domain**, add `zemet.org`
+and `www.zemet.org`, then set `zemet.org` as the primary domain.
+Netlify provisions HTTPS automatically (Let’s Encrypt). A redirect rule in
+`netlify.toml` already forces `www.zemet.org/*` → `https://zemet.org/:splat`
+(301), so the apex is canonical.
 
 Then at your domain registrar (wherever zemet.org is registered), either:
 
