@@ -2,8 +2,7 @@
 
 Single-page static website for Zero Mile EduTech, served at **https://zemet.org**.
 
-There is **no build step**: Netlify serves the repo root directly (`publish = "."`
-in `netlify.toml`, no build command). Any push to `master` redeploys automatically.
+There is **no build step**. Production is deployed with Wrangler direct upload from a clean `git archive` snapshot. Until Cloudflare Pages Git integration is connected, pushing to `master` does **not** auto-deploy.
 
 ## Structure
 
@@ -13,40 +12,56 @@ in `netlify.toml`, no build command). Any push to `master` redeploys automatical
   `assets/css/font-awesome.min.css` + `assets/fonts/` — icons
 - `assets/images/` — only the images the site uses
 - `favicon.png` — site icon
-- `netlify.toml` — publish dir + security headers
+- `_redirects` — Cloudflare Pages redirect: `www.zemet.org` → apex `zemet.org`
+- `_headers` — Cloudflare Pages security headers
+- `netlify.toml` — legacy Netlify config; ignored by Cloudflare (remove after cutover)
 
-## Deploying to a new Netlify account
+## Deploying with Cloudflare Pages + Wrangler
 
-The old Netlify site lived in a different account and cannot be moved from this
-repo alone — you must create a new site in your new account:
+Cloudflare project: `zemet`  
+Production branch: `master`  
+Production Pages URL: `https://zemet.pages.dev`
 
-1. Log in to your **new** Netlify account → **Add new site → Import an existing project**.
-2. Connect GitHub and select this repo (`zeroMileEduTechDotCom`).
-3. Build settings are read from `netlify.toml` automatically:
-   - **Build command:** (none / empty)
-   - **Publish directory:** `.`
-4. **Deploy site.** You’ll get a `*.netlify.app` URL — verify the site there first.
+Direct-upload deploy from the repo root:
 
-## Pointing zemet.org at the new site
+```bash
+DEPLOY_DIR=/tmp/zemet-cloudflare
+rm -rf "$DEPLOY_DIR" && mkdir -p "$DEPLOY_DIR"
+git archive HEAD | tar -x -C "$DEPLOY_DIR"
+wrangler pages deploy "$DEPLOY_DIR" --project-name=zemet --branch=master
+```
 
-The Netlify site is `zemet-org` (`https://zemet-org.netlify.app`). In its
-**Site settings → Domain management → Add custom domain**, add `zemet.org`
-and `www.zemet.org`, then set `zemet.org` as the primary domain.
-Netlify provisions HTTPS automatically (Let’s Encrypt). A redirect rule in
-`netlify.toml` already forces `www.zemet.org/*` → `https://zemet.org/:splat`
-(301), so the apex is canonical.
+Use a clean `git archive` snapshot so `.git/`, `.netlify/`, and `.wrangler/` are never uploaded. Local preview:
 
-Then at your domain registrar (wherever zemet.org is registered), either:
+```bash
+python3 -m http.server 8123
+```
 
-- **Option A — Netlify DNS (simplest):** in Netlify choose “Set up Netlify DNS”,
-  then change zemet.org’s nameservers at the registrar to the four Netlify
-  nameservers shown. Netlify then manages records + SSL for apex and `www`.
-- **Option B — external DNS:** keep the registrar’s nameservers and add:
-  - Apex `zemet.org` → `A` record `75.2.60.5` (Netlify load balancer)
-  - `www` → `CNAME` to `<your-site>.netlify.app`
+## Pointing zemet.org at Cloudflare Pages
 
-DNS can take up to 24h to propagate (usually minutes). Once live, HTTPS is
-enabled automatically.
+In Cloudflare dashboard: **Workers & Pages → `zemet` → Custom domains** → add:
+
+- `zemet.org` (set as primary/canonical)
+- `www.zemet.org`
+
+Because the zone already lives in Cloudflare, adding these custom domains should automatically create the DNS records and SSL certificate. The repo `_redirects` rule already forces:
+
+`https://www.zemet.org/* → https://zemet.org/:splat` (301)
+
+If Cloudflare does not auto-create DNS, add these records manually in **zemet.org → DNS**:
+
+- `www` → `CNAME` → `zemet.pages.dev` (Proxied ON, TTL Auto)
+- `@`/apex → `CNAME` → `zemet.pages.dev` (Proxied ON, TTL Auto; Cloudflare flattens apex CNAME)
+- Remove any old conflicting `A`/`CNAME`/redirect records pointing to Netlify or parking pages.
+
+DNS can take up to 24h to propagate (usually minutes). Then verify:
+
+```bash
+curl -sI https://zemet.org | head -3
+curl -sI https://www.zemet.org | head -3
+```
+
+Expected: apex `200`, `www` `301` to `https://zemet.org/`.
 
 ## Notes / to-do
 
@@ -55,4 +70,6 @@ enabled automatically.
   removed (both services are shut down). The contact section now links to a
   Google Maps search for the address instead.
 - The previous Gatsby v2 toolchain was removed: it could no longer build on
-  modern Node/Netlify images. Site history is preserved in git.
+  modern Node images. Site history is preserved in git.
+- After `zemet.org` is verified on Cloudflare: delete/disable the Netlify site,
+  revoke the Netlify token, and remove legacy `netlify.toml` + `.netlify/`.
