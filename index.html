@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Zero Mile EduTech</title>
+    <meta name="description" content="Zero Mile EduTech — Web and Mobile Application Development Company. Software development, web apps, mobile apps, consulting, training and social media marketing." />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+    <div class="body is-loading" id="page-root">
+
+        <section id="header">
+            <div class="inner">
+                <span><img src="/assets/images/logo.png" alt="Zero Mile EduTech logo" /></span>
+                <h1><strong>Zero Mile EduTech</strong></h1>
+                <p>Web and Mobile Application Development Company</p>
+                <ul class="actions">
+                    <li><a href="#one" class="button scrolly">Discover</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="one" class="main style1">
+            <div class="grid-wrapper">
+                <div class="col-6">
+                    <header class="major">
+                        <h2>About Us</h2>
+                    </header>
+                    <p>Zero Mile EduTech was initially started in 2014. We generally work for foreign countries. We provide better solutions to our clients for their business goal.</p>
+                </div>
+                <div class="col-6">
+                    <span class="image fit"><img src="/assets/images/about-us.jpg" alt="About Zero Mile EduTech" /></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="two" class="main style2">
+            <div class="grid-wrapper">
+                <div class="col-6">
+                    <ul class="major-icons">
+                        <li><span class="icon style1 major fa-code"></span></li>
+                        <li><span class="icon style2 major fa-bolt"></span></li>
+                        <li><span class="icon style3 major fa-camera-retro"></span></li>
+                        <li><span class="icon style4 major fa-cog"></span></li>
+                        <li><span class="icon style5 major fa-desktop"></span></li>
+                        <li><span class="icon style6 major fa-calendar"></span></li>
+                    </ul>
+                </div>
+                <div class="col-6">
+                    <header class="major">
+                        <h2>Our Services</h2>
+                    </header>
+                    <ul>
+                        <li>Software Development</li>
+                        <li>Web Apps Development</li>
+                        <li>Mobile App Development</li>
+                        <li>Software Consulting</li>
+                        <li>Software Training</li>
+                        <li>Social Media Marketing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="three" class="main style1 special">
+            <div class="grid-wrapper">
+                <div class="col-12">
+                    <header class="major">
+                        <h2>Technology stacks we use</h2>
+                    </header>
+                    <p></p>
+                </div>
+
+                <div class="col-4">
+                    <span class="image fit"><img src="/assets/images/lamp_stack.png" alt="LAMP/LEMP stack" /></span>
+                    <h3>LAMP/LEMP</h3>
+                    <p>LEMP is a variation of the ubiquitous LAMP stack used for developing and deploying web applications.</p>
+                </div>
+                <div class="col-4">
+                    <span class="image fit"><img src="/assets/images/mern_stack.png" alt="MEAN/MERN stack" /></span>
+                    <h3>MEAN/MERN</h3>
+                    <p>MERN is an acronym standing for MongoDB, Express.js, React, and Node.js. The kicker? The entire thing is written in JavaScript.</p>
+                </div>
+                <div class="col-4">
+                    <span class="image fit"><img src="/assets/images/jamstack.png" alt="JAMstack" /></span>
+                    <h3>JAM</h3>
+                    <p>JAMstack stands for JavaScript, APIs, and Markup — a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="four" class="main style2 special">
+            <div class="container">
+                <header class="major">
+                    <h2>Contact Us</h2>
+                </header>
+                <ul class="contact-details">
+                    <li><strong>Name</strong><span>Rakesh Tembhurne</span></li>
+                    <li><strong>Email</strong><span>rakesh@zeromileedutech.com</span></li>
+                    <li><strong>Phone</strong><span><a href="tel:+917020138038">+91 7020138038</a></span></li>
+                    <li><strong>Address</strong><span>Flat No. 302, Vaishnavi Regency, Behind Mahajan Hardware, Manish Nagar, Somalwada, Nagpur, 440015</span></li>
+                </ul>
+                <ul class="actions">
+                    <li><a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Vaishnavi+Regency+Manish+Nagar+Somalwada+Nagpur+440015" target="_blank" rel="noopener">View on Google Maps</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="footer">
+            <ul class="copyright">
+                <li>&copy; Zero Mile EduTech</li>
+            </ul>
+        </section>
+
+    </div>
+    <script>
+        // Replicates the old site's behaviour: enable transitions shortly after load.
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('page-root').classList.remove('is-loading');
+            }, 100);
+        });
+        // Smooth scroll for in-page anchors (e.g. the "Discover" button).
+        document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

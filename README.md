@@ -1,33 +1,56 @@
-# gatsby-starter-photon
-Gatsby.js V2 starter based on the Photon site template, designed by HTML5 UP. Check out https://codebushi.com/gatsby-starters/ for more Gatsby starters and templates.
+# Zero Mile EduTech — zemet.org
 
-## Preview
+Single-page static website for Zero Mile EduTech, served at **https://zemet.org**.
 
-https://gatsby-photon.surge.sh
+There is **no build step**: Netlify serves the repo root directly (`publish = "."`
+in `netlify.toml`, no build command). Any push to `master` redeploys automatically.
 
-## Installation
+## Structure
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-`gatsby new gatsby-starter-photon https://github.com/codebushi/gatsby-starter-photon`
+- `index.html` — the whole site (About, Services, Tech stack, Contact)
+- `404.html` — not-found page
+- `assets/css/main.css` — compiled from the old Gatsby SCSS (Photon template);
+  `assets/css/font-awesome.min.css` + `assets/fonts/` — icons
+- `assets/images/` — only the images the site uses
+- `favicon.png` — site icon
+- `netlify.toml` — publish dir + security headers
 
-Run `gatsby develop` in the terminal to start.
+## Deploying to a new Netlify account
 
-## CSS Grid
+The old Netlify site lived in a different account and cannot be moved from this
+repo alone — you must create a new site in your new account:
 
-The grid on this site was replaced with a custom version, built using CSS Grid. It's a very simple 12 column grid that is disabled on mobile. To start using the grid, wrap the desired items with `grid-wrapper`. Items inside the `grid-wrapper` use the class `col-` followed by a number, which should add up to 12.
+1. Log in to your **new** Netlify account → **Add new site → Import an existing project**.
+2. Connect GitHub and select this repo (`zeroMileEduTechDotCom`).
+3. Build settings are read from `netlify.toml` automatically:
+   - **Build command:** (none / empty)
+   - **Publish directory:** `.`
+4. **Deploy site.** You’ll get a `*.netlify.app` URL — verify the site there first.
 
-Here is an example of using the grid, for a 3 column layout:
+## Pointing zemet.org at the new site
 
-```
-<div className="grid-wrapper">
-    <div className="col-4">
-        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-    </div>
-    <div className="col-4">
-        <p>Content Here</p>
-    </div>
-    <div className="col-4">
-        <p>Adipiscing a commodo ante nunc accumsan et interdum mi ante adipiscing. A nunc lobortis non nisl amet vis sed volutpat aclacus nascetur ac non. Lorem curae et ante amet sapien sed tempus adipiscing id accumsan.</p>
-    </div>
-</div>
-```
+In the new site’s **Site settings → Domain management → Add custom domain**,
+add `zemet.org` and `www.zemet.org`, then set `zemet.org` as the primary domain.
+Netlify provisions HTTPS automatically (Let’s Encrypt).
+
+Then at your domain registrar (wherever zemet.org is registered), either:
+
+- **Option A — Netlify DNS (simplest):** in Netlify choose “Set up Netlify DNS”,
+  then change zemet.org’s nameservers at the registrar to the four Netlify
+  nameservers shown. Netlify then manages records + SSL for apex and `www`.
+- **Option B — external DNS:** keep the registrar’s nameservers and add:
+  - Apex `zemet.org` → `A` record `75.2.60.5` (Netlify load balancer)
+  - `www` → `CNAME` to `<your-site>.netlify.app`
+
+DNS can take up to 24h to propagate (usually minutes). Once live, HTTPS is
+enabled automatically.
+
+## Notes / to-do
+
+- The contact section still shows `rakesh@zeromileedutech.com` (dead since the
+  old domain lapsed). Update the email in `index.html` to a live address.
+- The old Google Analytics (UA-…) snippet and the old `goo.gl` map iframe were
+  removed (both services are shut down). The contact section now links to a
+  Google Maps search for the address instead.
+- The previous Gatsby v2 toolchain was removed: it could no longer build on
+  modern Node/Netlify images. Site history is preserved in git.
